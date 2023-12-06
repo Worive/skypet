@@ -1,10 +1,11 @@
 package com.worive.skypet;
 
+import com.worive.skypet.commands.ModCommands;
 import net.fabricmc.api.ClientModInitializer;
 
 public class SkyPetClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
+		ModCommands.registerCommands();
 	}
 }

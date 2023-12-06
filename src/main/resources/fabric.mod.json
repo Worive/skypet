@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "skypet",
+	"version": "${version}",
+	"name": "SkyPet",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/skypet/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.worive.skypet.SkyPet"
+		],
+		"client": [
+			"com.worive.skypet.SkyPetClient"
+		]
+	},
+	"mixins": [
+		"skypet.mixins.json",
+		{
+			"config": "skypet.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.20.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
